@@ -71,8 +71,8 @@ def get_tmd_weather(get_latest: bool):
 
 
 def main(args):
-
-    pretty_data = get_tmd_weather(args.get("get_latest"))
+  try:
+    pretty_data = get_tmd_weather(bool(args.get("get_latest")))
     
     if pretty_data is not None:
         return {
@@ -83,4 +83,9 @@ def main(args):
        return {
           'statusCode': HTTPStatus.INTERNAL_SERVER_ERROR,
           'body':[]
+       }
+  except Exception as e:
+     return {
+          'statusCode': HTTPStatus.INTERNAL_SERVER_ERROR,
+          'body':e
        }
