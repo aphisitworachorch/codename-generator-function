@@ -65,7 +65,7 @@ def get_tmd_weather(get_latest: bool):
         formatter['contents'].append(sources.replace("\xa0",""))
     
     if (formatter['format'] != "images"):
-      formatter['contents'].append(' '.join(formatter['contents']))
+      formatter['contents'] = [' '.join(formatter['contents'])]
 
     warning.append(formatter)
 
