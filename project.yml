@@ -4,5 +4,5 @@ packages:
       - name: warning
         runtime: 'python:default'
         limits:
-          timeout: 30000
-          memory: 1024
+          timeout: 15000
+          memory: 512

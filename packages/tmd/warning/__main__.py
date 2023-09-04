@@ -28,6 +28,7 @@ def get_tmd_weather(get_latest: bool):
   for data in find_listcontent:
     formatter = {
         "alert_at":"",
+        "alert_no":"",
         "alert_affected_to":"",
         "details":"",
         "alert_title":"",
@@ -51,6 +52,7 @@ def get_tmd_weather(get_latest: bool):
     formatter['alert_title'] = head_title
     formatter['alert_details'] = head_details
     formatter['alert_affected_to'] = thai_strptime(' '.join(re.findall(r'\([^)]*\)', formatter['details'])[-1].split(" ")[1:]).replace(")",""),"%d %B %Y").isoformat()
+    formatter['alert_no'] = re.findall(r'ฉบับที่\s+[0-9]+', formatter['details'])[-1].replace("ฉบับที่ ",'')
     for content in classify_content:
       if (content.find("img")):
         formatter['format'] = "images"
