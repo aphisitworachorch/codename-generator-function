@@ -85,6 +85,7 @@ def main(args):
           'body':[]
        }
   except Exception as e:
+     print(e)
      return {
           'statusCode': HTTPStatus.INTERNAL_SERVER_ERROR,
           'body':e
