@@ -1,8 +1,8 @@
 packages:
-  - name: tmd
+  - name: codename
     actions:
-      - name: warning
+      - name: generator
         runtime: 'python:default'
         limits:
           timeout: 64000
-          memory: 384
+          memory: 128
