@@ -3,6 +3,3 @@ packages:
     actions:
       - name: generator
         runtime: 'python:default'
-        limits:
-          timeout: 64000
-          memory: 128

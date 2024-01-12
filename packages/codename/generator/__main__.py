@@ -9,8 +9,10 @@ def main(args):
 
     if cname is not None:
         return {
-        'statusCode': HTTPStatus.OK,
-        'body': cname
+          'statusCode': HTTPStatus.OK,
+          'body': {
+             'name': cname
+          }
         }
     else:
        return {
