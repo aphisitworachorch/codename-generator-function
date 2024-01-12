@@ -3,3 +3,5 @@ packages:
     actions:
       - name: generator
         runtime: 'python:default'
+        limits:
+          memory: 384
