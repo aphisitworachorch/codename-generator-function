@@ -3,7 +3,7 @@ from bangsue_codename import *
 
 def main():
   try:
-    p = BangsueCodename.ThailandDistrict()
+    p = BangsueCodename.BTSSkyTrain()
     codename = p.get_code_name()
     return {"body": p.convert_codename_to_string(codename, "all"),"status": HTTPStatus.OK}
   except Exception as e:
