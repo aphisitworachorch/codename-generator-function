@@ -5,3 +5,11 @@ packages:
         runtime: 'python:default'
         limits:
           memory: 384
+      - name: mrta_generator
+        runtime: 'python:default'
+        limits:
+          memory: 384
+      - name: bts_generator
+        runtime: 'python:default'
+        limits:
+          memory: 384
